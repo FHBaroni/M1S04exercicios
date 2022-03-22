@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M1S04ex2</title>
+</head>
+
+<body>
+  <h1>M1S04ex2</h1>
+  <ul>
+    <li>Crie uma **função **que receba como **parâmetro dois números e a operação a ser realizada**;</li>
+    <li>Utilizando a estrutura condicional **switch** faça a validação e realize a operação desejada (soma, subtração,
+      divisão ou multiplicação) com os dois números passados por parâmetro e exiba o resultado utilizando console.log.
+    </li>
+    <li>Caso seja passada uma operação diferente das 4 à cima deve exibir utilizando console.log que a operação não está
+      disponível.</li>
+    <li>Chame essa função 5 vezes passando em cada uma uma operação como argumento e na ultima passando uma operação
+      inválida.</li>
+  </ul>
+  <script>
+    var operacao = prompt("Digite a operação que desja realizar", "apenas uma  destas + , - , * , / ");
+    var num1 = Number(prompt("Digite o primeiro número"));
+    var num2 = Number(prompt("Digite o segundo número"));
+    var resultado;
+    function calc() {
+      switch (operacao) {
+        case '+':
+          resultado = num1 + num2;
+          break;
+        case '-':
+          resultado = num1 - num2;
+          break;
+        case '*':
+          resultado = num1 * num2;
+          break;
+        case '/':
+          resultado = num1 / num2;
+          break;
+        default:
+          console.log("Operação não disponível")
+          alert("Operação não disponível")
+          break;
+      }
+
+      console.log(resultado)
+    }
+    calc();
+    alert("O resultado é: " + resultado)
+
+  </script>
+
+</body>
+
+</html>
