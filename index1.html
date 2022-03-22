@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M1S04ex1</title>
+</head>
+
+<body>
+  <h1>M1S04ex1</h1>
+  <p>Utilizando estrutura condicional ** exiba(console.log) ** a descrição da classificação da ** idade(variável) ** da
+    pessoa de acordo com os dados abaixo:<br><br>
+
+    Jovens - Indivíduos de até 15 anos;<br>
+    Adultos - Indivíduos com idade entre 16 até 64 anos;<br>
+    Idosos - Indivíduos de 65 anos em diante.</p>
+
+
+  <script>
+    idade = prompt("Digite a digite a idade para a classifiação");
+    if (idade <= 15) {
+      console.log("Jovem");
+      alert("Jovem")
+    } else if (idade > 15 & idade < 65) {
+      console.log("Adulto");
+      alert("Adulto")
+    } else {
+      console.log("Idoso");
+      alert("Idoso")
+    }
+  </script>
+</body>
+
+</html>
