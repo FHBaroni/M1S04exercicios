@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M1S04ex5</title>
+</head>
+
+<body>
+  <h1>M1S04ex5</h1>
+
+  <p>Dado o array abaixo percorra ele e exiba o animal e sua raça utilizando console.log.</p>
+  <p>var animais = [<br>
+    { animal: 'Cachorro', raca: 'Akita' },<br>
+    { animal: 'Cachorro', raca: 'Boxer' },<br>
+    { animal: 'Cachorro', raca: 'Dálmata' },<br>
+    { animal: 'Cachorro', raca: 'Pastor alemão' },<br>
+    { animal: 'Gato', raca: 'Persa' },<br>
+    { animal: 'Gato', raca: 'Sphynx' },<br>
+    { animal: 'Gato', raca: 'Siamês' },<br>
+    ]<br><br>
+    _Dica: forEach pode ser uma boa_
+  </p>
+  <script>
+    var animais = [
+      { animal: 'Cachorro', raca: 'Akita' }, { animal: 'Cachorro', raca: 'Boxer' }, { animal: 'Cachorro', raca: 'Dálmata' },
+      { animal: 'Cachorro', raca: 'Pastor alemão' }, { animal: 'Gato', raca: 'Persa' }, { animal: 'Gato', raca: 'Sphynx' }, { animal: 'Gato', raca: 'Siamês' },
+    ]
+
+    animais.forEach(item => console.log(item.animal + " : " + item.raca));
+    animais.forEach(item => document.write(item.animal + " : " + item.raca + "<br>"));
+  </script>
+</body>
+
+</html>
