@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M1S04ex8</title>
+</head>
+
+<body>
+  <h1>M1S04ex8</h1>
+
+  <p>
+    - Dado o array de cidades abaixo, filtre apenas as cidades com mais de 200000 habitantes;<br>
+    - Após o filtro ordene por ordem decrescente de acordo com a população (primeiro cidades mais populosas);<br><br>
+
+    **cidades:** [<br>
+    { nome: 'Patos de Minas', populacao: 153585 },<br>
+    { nome: 'Lages', populacao: 157349 },<br>
+    { nome: 'Ibiúna', populacao: 79479 },<br>
+    { nome: 'Maringá', populacao: 403063 },<br>
+    { nome: 'Curitiba', populacao: 1963726 },<br>
+    { nome: 'Florianópolis', populacao: 508826 },<br>
+    { nome: 'Pato Branco', populacao: 84779 },<br>
+    ];<br><br>
+
+    _Dica: Dar uma olhada nos métodos filter e sort<br>
+    extra: https://www.w3schools.com/jsref/jsref_sort.asp_<br><br>
+
+    <b>***Após abrir o console do navegador atualize a página<b>
+  </p>
+  <script>
+    cidades = [
+      { nome: 'Patos de Minas', populacao: 153585 },
+      { nome: 'Lages', populacao: 157349 },
+      { nome: 'Ibiúna', populacao: 79479 },
+      { nome: 'Maringá', populacao: 403063 },
+      { nome: 'Curitiba', populacao: 1963726 },
+      { nome: 'Florianópolis', populacao: 508826 },
+      { nome: 'Pato Branco', populacao: 84779 }
+    ];
+
+    cidadesFiltro = cidades.filter(cidade => cidade.populacao > 200000);
+    cidadesFiltroSeq = cidadesFiltro.sort((a, b) => b.populacao - a.populacao);
+    console.table(cidadesFiltroSeq);
+  </script>
+</body>
+
+</html>
