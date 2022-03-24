@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M1S04ex6</title>
+</head>
+
+<body>
+  <h1>M1S04ex6</h1>
+  <p>
+    - Cria uma variável impares que inicia com 0;<br>
+    - Crie uma variável contador que inicia com 0;<br>
+    - Utilizando a estrutura de repetição **while** executa o código enquanto a variável impares for menor que 10;<br>
+    - A variável contador deve ser incrementado dentro do while toda vez que ele for iterado;<br>
+    - A variável impares só deve ser incrementada dentro do while quando o contador for um número ímpar;<br>
+    - A cada iteração do while imprima o valor de contador e de impares usando console.log.<br>
+  </p>
+  <script>
+    let impares = 0;
+    let cont = 0;
+    while (impares < 10) {
+      cont % 2 == 1 ? (cont++, impares++) : cont++;
+      console.log("contador " + cont + " Números ímpares" + impares);
+    }
+  </script>
+
+</body>
+
+</html>
