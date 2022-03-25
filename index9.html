@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M1S04ex9</title>
+</head>
+
+<body>
+  <h1>M1S04ex9</h1>
+
+  <p>
+    - Dado o array de cidades abaixo verificar se o array contém pelo menos uma cidade com o nome Florianópolis.<br>
+    - Deve ser retornado true filtrando por 'Florianópolis' ou 'florianópolis'.<br><br>
+
+    const cidades = [<br>
+    { nome: 'Patos de Minas', populacao: 153585 },<br>
+    { nome: 'Lages', populacao: 157349 },<br>
+    { nome: 'Ibiúna', populacao: 79479 },<br>
+    { nome: 'Maringá', populacao: 403063 },<br>
+    { nome: 'Curitiba', populacao: 1963726 },<br>
+    { nome: 'Florianópolis', populacao: 508826 },<br>
+    { nome: 'Pato Branco', populacao: 84779 },<br>
+    ];<br><br>
+
+    _Dica: Para resolver os problemas de maiúsculo e minúsculo de uma olhada em toLowerCase e toUpperCase_
+
+  </p>
+
+  <script>
+    const cidades = [
+      { nome: 'Patos de Minas', populacao: 153585 },
+      { nome: 'Lages', populacao: 157349 },
+      { nome: 'Ibiúna', populacao: 79479 },
+      { nome: 'Maringá', populacao: 403063 },
+      { nome: 'Curitiba', populacao: 1963726 },
+      { nome: 'Florianópolis', populacao: 508826 },
+      { nome: 'Pato Branco', populacao: 84779 },
+    ];
+
+    const cidadeInclui = cidades.filter(cidade => cidade.nome.toUpperCase().includes("FLORIANÓPOLIS"));
+    console.log(cidadeInclui);
+  </script>
+</body>
+
+</html>
