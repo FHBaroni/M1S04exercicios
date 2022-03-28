@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M1S04ex10versão1</title>
+</head>
+
+<body>
+  <h1>M1S04ex10versão1</h1>
+
+  <ol>
+    <li>
+      Declare como variável em seu código o array de contas de clientes abaixo;
+    </li><br>
+    <li>
+      Crie uma função para sacar dinheiro que deve receber como parâmetro o valor a ser sacado e o id da conta;
+      <ol>
+        <li>Se o valor for menor ou igual zero deve exibir a mensagem de valor inválido e não realizar nenhuma operação;
+        </li>
+        <li>Se o valor for maior que o saldo em conta deve exibir a mensagem de saldo insuficiente e exibir o saldo
+          atual;</li>
+        <li>
+          Se o valor for maior que zero e menor que o saldo em conta deve exibir a mensagem informado que o saque
+          ocorreu com sucesso e o saldo atual da conta após o saque, além de atualizar o array com esse novo valor;
+        </li>
+      </ol><br>
+    </li>
+    <li>
+      Criar função para depositar dinheiro que deve receber como parâmetro o valor a ser depositado e o id da conta;
+      <ol>
+        <li>Se o valor for menor ou igual zero deve exibir a mensagem de valor inválido e não realizar nenhuma operação;
+        </li>
+        <li>Se o valor for maior que zero deve exibir a mensagem informado que o deposito ocorreu com sucesso e o saldo
+          atual da conta após o deposito, além de atualizar o array com esse novo valor;</li>
+
+      </ol><br>
+    </li>
+    <li>
+      Chamar as duas funções criadas para validar os cenários;
+    </li>
+
+
+    **contasClientes :** [<br>
+    {<br>
+    id: 1,<br>
+    saldo: 500,<br>
+    },<br>
+    {<br>
+    id: 2,<br>
+    saldo: 30000,<br>
+    },<br>
+    {<br>
+    id: 2,<br>
+    saldo: 50,<br>
+    },<br>
+    ];<br><br>
+
+    _Dica: Dê uma olhadinha em find, map, if..._
+
+    <script>
+      contasClientes = [
+        { id: 1, saldo: 500, },
+        { id: 2, saldo: 30000, },
+        { id: 3, saldo: 50, },
+      ];
+
+      function sacar(valorSaque, id) {
+        if (valorSaque <= 0) {
+          console.log("valor inválido");
+        } else if (valorSaque > contasClientes[id].saldo) {
+          console.log(`saldo insuficiente!
+    saldo atual ${contasClientes[id].saldo}`);
+        } else {
+          contasClientes[id].saldo = (contasClientes[id].saldo - valorSaque);
+          console.log(`saldo efetuado com sucesso!
+    saldo atual ${contasClientes[id].saldo}`);
+        }
+      }
+
+      function depositar(valorDeposito, id) {
+        if (valorDeposito <= 0) {
+          console.log("valor inválido");
+        } else {
+          contasClientes[id].saldo = (contasClientes[id].saldo + valorDeposito)
+          console.log(`Depósito efetuado com sucesso!
+      saldo atual: ${contasClientes[id].saldo}`);
+        }
+      }
+      sacar(35, 2)
+      sacar(50, 2)
+      sacar(10, 2)
+      depositar(100, 2)
+    </script>
+</body>
+
+</html>
